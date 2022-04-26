@@ -56,7 +56,7 @@ ROOT_URLCONF = 'cookbook.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates/'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,9 +125,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 GRAPHENE = {
-        'SCHEMA': 'ingredients.schema.schema'
+        #'SCHEMA': 'ingredients.schema.schema'
         }
 
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/graphql/'
-LOGOUT_REDIRECT_URL = '/login/'

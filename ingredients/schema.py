@@ -25,7 +25,7 @@ class Query(graphene.ObjectType):
 
     def resolve_category_by_name(root, info, name):
         try:
-            return Category.objects.get(name=name)
+            return Category.objects.get(name=name.capitalize())
         except Category.DoesNotExist:
             return None
 

@@ -1,0 +1,4 @@
+django-graphql-jwt
+flush database
+run migrations
+create registration mutations in schema.py

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %} {{ form.username.label_tag }}
+  <input type="text" id="id_username" name='username' required />
+  <br />
+  {{ form.password.label_tag }}
+  <input type="password" name='password' id="id_password" required />
+  {% if form.non_field_errors %} {% for err in for.non_field_errors %}
+  <p>{{err|escape}}</p>
+  {% endfor %} {% endif %}
+  <button type="submit">Login</button>
+  <p>New? <a href="{% url 'register' %}">Register</a></p>   
+</form>

@@ -99,6 +99,8 @@ class CreateIngredients(graphene.Mutation):
             )
 
 
+# DeleteIngredients, DeleteCategory, UpdateIngredient and UpdateCategory to be implemented when needed
+
 class Query(graphene.ObjectType):
     viewer = graphene.Field(UserType)  # token=graphene.String(required=True))
     all_ingredients = graphene.List(IngredietType)

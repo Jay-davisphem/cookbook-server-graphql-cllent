@@ -25,9 +25,10 @@ class Ingredient(models.Model):
         Category, related_name="ingredients", on_delete=models.CASCADE
     )
 
-    constraints = [
-        models.UniqueConstraint(fields=["name"], name="unique name ingredient")
-    ]
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["name"], name="unique name ingredient")
+        ]
 
     def __str__(self):
         return f"{self.name}"
